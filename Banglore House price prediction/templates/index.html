@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title> Prediction</title>
+
+</head>
+
+<body>
+
+<div class='login'>
+ <h1> prediction </h1>
+ 
+ <form action='{{ url_for('predict')}}'  method='POST'>
+  <input type='text' name='total_sqft' placeholder='total_sqft'>
+  <input type='text' name='location' placeholder='location'>
+  <input type='text' name='bhk' placeholder='bhk'>
+  <input type='text' name='bath' placeholder='bath'>
+   <button type='submit' > Predict </button>   
+ </form>
+</div>
+<br>
+{{ prediction_text }}
